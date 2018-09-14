@@ -757,6 +757,9 @@ fieldset[disabled] .btn-primary:hover {
   .product-body .body {
     padding: 30px 20px!important;
   }
+  .product-header {
+    margin-left: 10px;
+  }
 }
 .btn-xl {
   font-size: 18px;
@@ -826,8 +829,10 @@ ul.list-inline.quicklinks {
 h2.project-title {
   text-transform: capitalize;
   font-family: 'Lobster Two', cursive;
-  font-size: 40px;
+  font-size: 36px;
   text-align: left;
+  display: flex;
+  align-items: center;
 }
 #summary label,
 #detail label {

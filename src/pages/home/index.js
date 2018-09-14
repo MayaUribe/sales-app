@@ -7,6 +7,7 @@ import '../../index.css';
 import './home.css';
 
 import { PRODUCTS } from '../../data/products';
+import SubHeader from "../../components/subHeader";
 
 class Home extends Component {
   _truncateText(string, length) {
@@ -73,9 +74,12 @@ class Home extends Component {
 
   render() {
     return (
-      <div id="products" className="products container">
-        <div className="row">
-          {this._renderProducts()}
+      <div>
+        <SubHeader title="Inicio" isHome />
+        <div id="products" className="products container">
+          <div className="row">
+            {this._renderProducts()}
+          </div>
         </div>
       </div>
     );

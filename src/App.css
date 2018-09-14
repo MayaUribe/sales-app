@@ -37,6 +37,13 @@ body {
   vertical-align: top!important;
   margin-left: 5px;
 }
+.app-icon {
+  color: #3a3a3a;
+  margin-right: 15px;
+  font-size: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+}
 .contact-me-btn {
   color: #fff!important;
   cursor: pointer;
