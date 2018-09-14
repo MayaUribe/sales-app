@@ -12,7 +12,7 @@ class HeaderMenu extends Component {
           <Link className="nav-link js-scroll-trigger" to='/'>Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link js-scroll-trigger" href="#contact">Contacto</a>
+          <Link className="nav-link js-scroll-trigger" to="/contacto">Contacto</Link>
         </li>
       </ul>
     );

@@ -8,6 +8,7 @@ import _ from 'lodash';
 import '../../App.css';
 import '../../index.css';
 
+import SubHeader from '../../components/subHeader';
 import { PRODUCTS } from '../../data/products';
 import {NavLink} from "react-router-dom";
 
@@ -31,10 +32,6 @@ class Product extends Component {
 
   componentDidMount() {
     this.fetchProduct();
-  }
-
-  _handleGoToPage() {
-    // browserHistory.push('/');
   }
 
   renderGallery() {
@@ -66,7 +63,7 @@ class Product extends Component {
         <div className="row">
           <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-right back-button">
             <NavLink to='/'>
-              <FaChevronLeft onClick={this._handleGoToPage.bind(this)} />
+              <FaChevronLeft />
             </NavLink>
           </div>
           <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 product-header">
@@ -86,7 +83,7 @@ class Product extends Component {
 
     return (
       <div>
-        {this._renderHeader()}
+        <SubHeader title={product.name || ""} />
         <section className="product-body" id="detail">
           {this.renderGallery()}
           <div className="container body">
