@@ -93,13 +93,16 @@ class Product extends Component {
             <div className="portfolio-caption">
               <h4>{product.name}</h4>
               <div>
-                <strong>Precio:</strong> {product.price}
+                <strong>Precio de venta:</strong> ${product.price}
+              </div>
+              <div>
+                <strong>Precio de refencia nuevo:</strong> ${product.referencePrice}
               </div>
               <div>
                 <strong>Rerefencia:</strong> <a href={product.reference} target="_blank">{product.reference}</a>
               </div>
               <div>
-                <strong>Descripcion:</strong> {product.description}
+                <strong>Descripción:</strong> {product.description}
               </div>
             </div>
           </div>

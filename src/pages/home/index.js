@@ -30,18 +30,20 @@ class Home extends Component {
           </div>
         </NavLink>
         <div className="portfolio-caption">
-          <h4>{product.name}</h4>
+          <NavLink to={productLink}>
+            <h4>{product.name}</h4>
+          </NavLink>
           <div>
-            <strong>Precio de venta:</strong> {product.price}
+            <strong>Precio de venta:</strong> ${product.price}
           </div>
           <div>
-            <strong>Precio de refencia nuevo:</strong> {product.price}
+            <strong>Precio de refencia nuevo:</strong> ${product.referencePrice}
           </div>
           <div>
             <strong>Rerefencia:</strong> <a href={product.reference} target="_blank">{product.reference}</a>
           </div>
           <div>
-            <strong>Descripcion:</strong>
+            <strong>Descripción:</strong>
             <p>{description}</p>
           </div>
         </div>
