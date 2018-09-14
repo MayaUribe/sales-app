@@ -1,0 +1,112 @@
+import React, { Component } from 'react';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+
+import { FaChevronLeft } from 'react-icons/fa';
+import _ from 'lodash';
+
+import '../../App.css';
+import '../../index.css';
+
+import { PRODUCTS } from '../../data/products';
+import {NavLink} from "react-router-dom";
+
+class Product extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      product: null
+    };
+  }
+
+  fetchProduct() {
+    const { id } = this.props.match.params;
+    let product = _.find(PRODUCTS, function(p) {
+      return p.id.toString() === id;
+    });
+
+    this.setState({ product });
+  }
+
+  componentDidMount() {
+    this.fetchProduct();
+  }
+
+  _handleGoToPage() {
+    // browserHistory.push('/');
+  }
+
+  renderGallery() {
+    const { product } = this.state;
+
+    if (!product) {
+      return;
+    }
+
+    return (
+      <div className="gallery-container">
+        <ImageGallery
+          items={product.images.map(image => ({
+              original: image.image,
+              thumbnail: image.image
+            })
+          )}
+          showPlayButton={false}
+          showFullscreenButton={false}
+        />
+      </div>
+    );
+  }
+
+  _renderHeader() {
+    const { name } = this.state.product || "";
+    return (
+      <section className="bg-project" id="project">
+        <div className="row">
+          <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-right back-button">
+            <NavLink to='/'>
+              <FaChevronLeft onClick={this._handleGoToPage.bind(this)} />
+            </NavLink>
+          </div>
+          <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 product-header">
+            <h2 className="project-title">{name}</h2>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  render() {
+    const { product } = this.state;
+
+    if (!product) {
+      return null;
+    }
+
+    return (
+      <div>
+        {this._renderHeader()}
+        <section className="product-body" id="detail">
+          {this.renderGallery()}
+          <div className="container body">
+            <div className="portfolio-caption">
+              <h4>{product.name}</h4>
+              <div>
+                <strong>Precio:</strong> {product.price}
+              </div>
+              <div>
+                <strong>Rerefencia:</strong> <a href={product.reference} target="_blank">{product.reference}</a>
+              </div>
+              <div>
+                <strong>Descripcion:</strong> {product.description}
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+}
+
+export default Product;

@@ -1,0 +1,83 @@
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FaPlus } from 'react-icons/fa';
+
+import '../../App.css';
+import '../../index.css';
+import './home.css';
+
+import { PRODUCTS } from '../../data/products';
+
+class Home extends Component {
+  _truncateText(string, length) {
+    if (string.length > length)
+      return string.substring(0, length) + '...';
+    else
+      return string;
+  };
+
+  _renderProductRow(product, i) {
+    let productLink = '/product/' + product.id;
+    let description = this._truncateText(product.description, 150);
+
+    return(
+      <div key={i} className="col-md-4 col-sm-6 portfolio-item">
+        <NavLink className="portfolio-link" to={productLink} style={{ backgroundImage: `url(${product.thumbnail})` }}>
+          <div className="portfolio-hover">
+            <div className="portfolio-hover-content">
+              <FaPlus className="fa-3x" />
+            </div>
+          </div>
+        </NavLink>
+        <div className="portfolio-caption">
+          <h4>{product.name}</h4>
+          <div>
+            <strong>Precio de venta:</strong> {product.price}
+          </div>
+          <div>
+            <strong>Precio de refencia nuevo:</strong> {product.price}
+          </div>
+          <div>
+            <strong>Rerefencia:</strong> <a href={product.reference} target="_blank">{product.reference}</a>
+          </div>
+          <div>
+            <strong>Descripcion:</strong>
+            <p>{description}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  _sortById() {
+    PRODUCTS.sort(function(a, b) {
+      return b.id - a.id;
+    });
+  }
+
+  _renderProducts() {
+    let productsRow = [];
+    let self = this;
+    this._sortById();
+
+    PRODUCTS.forEach((product, i) => {
+      productsRow.push(self._renderProductRow(product, i));
+    });
+
+    return (
+      productsRow
+    );
+  }
+
+  render() {
+    return (
+      <div id="products" className="products container">
+        <div className="row">
+          {this._renderProducts()}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Home;
