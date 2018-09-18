@@ -245,25 +245,24 @@ header.masthead .intro-text .intro-heading {
   margin: 0 0 25px;
   display: flex;
   flex-direction: column;
-  min-height: 450px;
+  min-height: 500px;
 }
 
-#products .portfolio-item .portfolio-link {
+.portfolio-item .portfolio-link {
   position: relative;
+}
+.portfolio-link-img {
   display: block;
-  max-width: 400px;
   width: 100%;
-  height: 250px;
-  max-height: 240px;
   cursor: pointer;
-  margin-top: 5px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 }
 
-#products .portfolio-item .portfolio-link .portfolio-hover {
+.portfolio-hover {
   position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   -webkit-transition: all ease 0.5s;
@@ -273,7 +272,7 @@ header.masthead .intro-text .intro-heading {
   background: rgba(53, 179, 185, 0.9);
 }
 
-#products .portfolio-item .portfolio-link .portfolio-hover:hover {
+.portfolio-hover:hover {
   opacity: 1;
 }
 
@@ -658,6 +657,7 @@ footer {
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 9999;
 }
 footer span.copyright {
   font-size: 90%;

@@ -226,7 +226,7 @@ export const PRODUCTS = [
     name: 'Plancha eléctrica Cuisinart',
     price: 35.0,
     referencePrice: 75.0,
-    description: 'Procesador de comida Cuisinart.',
+    description: 'Plancha / tostadora eléctrica.',
     reference: 'https://goo.gl/E3UspC',
     thumbnail: 'https://dl.dropboxusercontent.com/s/zi1n6c1e6avywn7/ventathumb-1.jpg?dl=0',
     images: [
@@ -265,7 +265,7 @@ export const PRODUCTS = [
     name: 'Equipo de sonido Panasonic',
     price: 100.0,
     referencePrice: 270.0,
-    description: 'Procesador de comida Cuisinart.',
+    description: 'Equipo de sonido en perfecto estado, conexión bluetooth, usb.',
     reference: 'https://goo.gl/fotbmZ',
     thumbnail: 'https://dl.dropboxusercontent.com/s/yvm2i7xfeefyukv/ventathumb-32.jpg?dl=0',
     images: [
