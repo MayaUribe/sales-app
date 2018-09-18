@@ -27,7 +27,7 @@ class HeaderMenu extends Component {
     return (
       <nav className={classes} id="mainNav">
         <div className="container">
-          <NavLink className="navbar-brand js-scroll-trigger" to="/product/1" exact activeClassName="selected">
+          <NavLink className="navbar-brand js-scroll-trigger" to="/" exact activeClassName="selected">
             Venta de Garage
           </NavLink>
 

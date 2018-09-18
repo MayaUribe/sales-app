@@ -46,9 +46,10 @@ class Product extends Component {
         <ImageGallery
           items={product.images.map(image => ({
               original: image.image,
-              thumbnail: image.image
+              thumbnail: image.thumb || image.image
             })
           )}
+          lazyLoad
           showPlayButton={false}
           showFullscreenButton={false}
         />
@@ -90,10 +91,10 @@ class Product extends Component {
             <div className="portfolio-caption">
               <h4>{product.name}</h4>
               <div>
-                <strong>Precio de venta:</strong> ${product.price}
+                <strong>Precio de venta:</strong> {product.price}
               </div>
               <div>
-                <strong>Precio de refencia nuevo:</strong> ${product.referencePrice}
+                <strong>Precio de refencia nuevo:</strong> {product.referencePrice}
               </div>
               <div>
                 <strong>Rerefencia:</strong> <a href={product.reference} target="_blank">{product.reference}</a>

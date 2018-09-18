@@ -78,6 +78,11 @@ section h3.section-subheading {
   section#detail {
     padding: 0;
   }
+  .image-gallery-slides,
+  .image-gallery-slide,
+  .image-gallery-slide img {
+    min-height: 500px;
+  }
 }
 
 ::-moz-selection {
@@ -238,6 +243,9 @@ header.masthead .intro-text .intro-heading {
 #products .portfolio-item {
   right: 0;
   margin: 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
 }
 
 #products .portfolio-item .portfolio-link {
@@ -246,9 +254,9 @@ header.masthead .intro-text .intro-heading {
   max-width: 400px;
   width: 100%;
   height: 250px;
+  max-height: 240px;
   cursor: pointer;
   margin-top: 5px;
-  background-image: url(https://dl.dropboxusercontent.com/s/y1vtrvd5s70hpyu/dog-287419_1920.jpg?dl=0);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -646,7 +654,7 @@ section#contact .text-danger {
 footer {
   padding: 25px 0;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
@@ -957,7 +965,6 @@ div#summary {
   top: 5px;
 }
 .image-gallery-slide img {
-  max-height: 800px;
   object-fit: cover;
   object-position: center;
 }
