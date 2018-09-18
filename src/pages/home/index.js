@@ -17,15 +17,6 @@ class Home extends Component {
       return string;
   };
 
-  /*
-  <NavLink className="portfolio-link" to={productLink} style={{ backgroundImage: `url(${product.thumbnail})` }}>
-    <div className="portfolio-hover">
-      <div className="portfolio-hover-content">
-        <FaPlus className="fa-3x" />
-      </div>
-    </div>
-  </NavLink>
-  */
   _renderProductRow(product, i) {
     let productLink = '/product/' + product.id;
     let description = this._truncateText(product.description, 150);
