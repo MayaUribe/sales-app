@@ -97,7 +97,7 @@ class Product extends Component {
                 <strong>Precio de refencia nuevo:</strong> {product.referencePrice}
               </div>
               <div>
-                <strong>Rerefencia:</strong> <a href={product.reference} target="_blank">{product.reference}</a>
+                <strong>Referencia:</strong> <a href={product.reference} target="_blank">{product.reference}</a>
               </div>
               <div>
                 <strong>Descripción:</strong> {product.description}
