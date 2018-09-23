@@ -59,6 +59,7 @@ class Product extends Component {
 
   _renderHeader() {
     const { name } = this.state.product || "";
+
     return (
       <section className="bg-project" id="project">
         <div className="row">
@@ -68,7 +69,7 @@ class Product extends Component {
             </NavLink>
           </div>
           <div className="col-lg-10 col-md-10 col-sm-10 col-xs-10 product-header">
-            <h2 className="project-title">{name}</h2>
+            <h2>{name}</h2>
           </div>
         </div>
       </section>
@@ -77,6 +78,7 @@ class Product extends Component {
 
   render() {
     const { product } = this.state;
+    let titleClasses = product ? (product.sold ? 'sold-title' : '') : '';
 
     if (!product) {
       return null;
@@ -89,7 +91,12 @@ class Product extends Component {
           {this.renderGallery()}
           <div className="container body">
             <div className="portfolio-caption">
-              <h4>{product.name}</h4>
+              <h4 className={titleClasses}>
+                {product.sold ?
+                  "[VENDIDO] " : null
+                }
+                {product.name}
+              </h4>
               <div>
                 <strong>Precio de venta:</strong> ${product.price}
               </div>

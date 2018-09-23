@@ -20,11 +20,17 @@ class Home extends Component {
   _renderProductRow(product, i) {
     let productLink = '/product/' + product.id;
     let description = this._truncateText(product.description, 150);
+    let titleClasses = product.sold ? 'sold-title' : '';
 
     return(
       <div key={i} className="col-md-4 col-sm-6 portfolio-item">
         <NavLink className="portfolio-link" to={productLink}>
-          <img className="portfolio-link-img"  src={product.thumbnail} />
+          <div className="sold-container">
+            <img className="portfolio-link-img" src={product.thumbnail} />
+            {product.sold ?
+              <div className="sold">VENDIDO</div>
+            : null}
+          </div>
           <div className="portfolio-hover">
             <div className="portfolio-hover-content">
               <FaPlus className="fa-3x" />
@@ -33,7 +39,7 @@ class Home extends Component {
         </NavLink>
         <div className="portfolio-caption">
           <NavLink to={productLink}>
-            <h4>{product.name}</h4>
+            <h4 className={titleClasses}>{product.name}</h4>
           </NavLink>
           <div>
             <strong>Precio de venta:</strong> ${product.price}

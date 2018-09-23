@@ -1,7 +1,7 @@
 export const PRODUCTS = [
   {
     id: 1,
-    sold: false,
+    sold: true,
     name: 'Batidora KitchenAid',
     price: 20.0,
     referencePrice: 40.0,
@@ -229,7 +229,7 @@ export const PRODUCTS = [
   },
   {
     id: 7,
-    sold: false,
+    sold: true,
     name: 'Plancha eléctrica Cuisinart',
     price: 35.0,
     referencePrice: 75.0,
