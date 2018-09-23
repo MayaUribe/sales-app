@@ -327,8 +327,12 @@ export const PRODUCTS = [
     referencePrice: 270.0,
     description: 'Aspiradora Dyson.',
     reference: 'https://goo.gl/qBu5CX',
-    thumbnail: 'https://dl.dropboxusercontent.com/s/41fqqz11m25rhub/ventathumb-1.jpg?dl=0',
+    thumbnail: 'https://dl.dropboxusercontent.com/s/6tp3jmez5f98odo/ventathumb-6.jpg?dl=0',
     images: [
+      {
+        image: 'https://dl.dropboxusercontent.com/s/hmawq9rg45yw3e3/ventathumb-6.jpg?dl=0',
+        thumb: 'https://dl.dropboxusercontent.com/s/6tp3jmez5f98odo/ventathumb-6.jpg?dl=0'
+      },
       {
         image: 'https://dl.dropboxusercontent.com/s/j6a0u74jum2pok1/ventathumb-1.jpg?dl=0',
         thumb: 'https://dl.dropboxusercontent.com/s/41fqqz11m25rhub/ventathumb-1.jpg?dl=0'
@@ -348,10 +352,6 @@ export const PRODUCTS = [
       {
         image: 'https://dl.dropboxusercontent.com/s/opc7vp2xr8kniqw/ventathumb-5.jpg?dl=0',
         thumb: 'https://dl.dropboxusercontent.com/s/ke0sp7lyjeph7yl/ventathumb-5.jpg?dl=0'
-      },
-      {
-        image: 'https://dl.dropboxusercontent.com/s/hmawq9rg45yw3e3/ventathumb-6.jpg?dl=0',
-        thumb: 'https://dl.dropboxusercontent.com/s/6tp3jmez5f98odo/ventathumb-6.jpg?dl=0'
       },
     ],
   },
