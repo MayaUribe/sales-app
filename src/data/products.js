@@ -1,6 +1,7 @@
 export const PRODUCTS = [
   {
     id: 1,
+    sold: false,
     name: 'Batidora KitchenAid',
     price: 20.0,
     referencePrice: 40.0,
@@ -36,6 +37,7 @@ export const PRODUCTS = [
   },
   {
     id: 2,
+    sold: false,
     name: 'Rowenta Steam Iron (Plancha vapor)',
     price: 140.0,
     referencePrice: 280.0,
@@ -79,6 +81,7 @@ export const PRODUCTS = [
   },
   {
     id: 3,
+    sold: false,
     name: 'Conair Steamer (Plancha de mano)',
     price: 15.0,
     referencePrice: 30.0,
@@ -126,6 +129,7 @@ export const PRODUCTS = [
   },
   {
     id: 4,
+    sold: false,
     name: 'Batidora de mano KitchenAid',
     price: 25.0,
     referencePrice: 45.0,
@@ -161,6 +165,7 @@ export const PRODUCTS = [
   },
   {
     id: 5,
+    sold: false,
     name: 'Tostadora KitchenAid',
     price: 35.0,
     referencePrice: 70.0,
@@ -192,6 +197,7 @@ export const PRODUCTS = [
   },
   {
     id: 6,
+    sold: false,
     name: 'Procesador de comida Cuisinart',
     price: 25.0,
     referencePrice: 55.0,
@@ -223,6 +229,7 @@ export const PRODUCTS = [
   },
   {
     id: 7,
+    sold: false,
     name: 'Plancha eléctrica Cuisinart',
     price: 35.0,
     referencePrice: 75.0,
@@ -262,6 +269,7 @@ export const PRODUCTS = [
   },
   {
     id: 8,
+    sold: false,
     name: 'Equipo de sonido Panasonic',
     price: 100.0,
     referencePrice: 270.0,
@@ -309,6 +317,42 @@ export const PRODUCTS = [
         image: 'https://dl.dropboxusercontent.com/s/tzrvw0ucam6i8a1/venta-39.jpg?dl=0',
         thumb: 'https://dl.dropboxusercontent.com/s/82e12bap6ezf87g/ventathumb-39.jpg?dl=0'
       }
+    ],
+  },
+  {
+    id: 9,
+    sold: false,
+    name: 'Aspiradora Dyson',
+    price: 135.0,
+    referencePrice: 270.0,
+    description: 'Aspiradora Dyson.',
+    reference: 'https://goo.gl/qBu5CX',
+    thumbnail: 'https://dl.dropboxusercontent.com/s/41fqqz11m25rhub/ventathumb-1.jpg?dl=0',
+    images: [
+      {
+        image: 'https://dl.dropboxusercontent.com/s/j6a0u74jum2pok1/ventathumb-1.jpg?dl=0',
+        thumb: 'https://dl.dropboxusercontent.com/s/41fqqz11m25rhub/ventathumb-1.jpg?dl=0'
+      },
+      {
+        image: 'https://dl.dropboxusercontent.com/s/ngz939i0ut5ddzo/ventathumb-2.jpg?dl=0',
+        thumb: 'https://dl.dropboxusercontent.com/s/8r1q84wmpom4xfp/ventathumb-2.jpg?dl=0'
+      },
+      {
+        image: 'https://dl.dropboxusercontent.com/s/e8c5qfzqojhtuaf/ventathumb-3.jpg?dl=0',
+        thumb: 'https://dl.dropboxusercontent.com/s/yx7bsn2im4cokni/ventathumb-3.jpg?dl=0'
+      },
+      {
+        image: 'https://dl.dropboxusercontent.com/s/skucueqtfmzv8rd/ventathumb-4.jpg?dl=0',
+        thumb: 'https://dl.dropboxusercontent.com/s/k5ekbbez7hj6vr2/ventathumb-4.jpg?dl=0'
+      },
+      {
+        image: 'https://dl.dropboxusercontent.com/s/opc7vp2xr8kniqw/ventathumb-5.jpg?dl=0',
+        thumb: 'https://dl.dropboxusercontent.com/s/ke0sp7lyjeph7yl/ventathumb-5.jpg?dl=0'
+      },
+      {
+        image: 'https://dl.dropboxusercontent.com/s/hmawq9rg45yw3e3/ventathumb-6.jpg?dl=0',
+        thumb: 'https://dl.dropboxusercontent.com/s/6tp3jmez5f98odo/ventathumb-6.jpg?dl=0'
+      },
     ],
   },
 ];
