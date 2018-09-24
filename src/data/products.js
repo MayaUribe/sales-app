@@ -37,7 +37,7 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    sold: false,
+    sold: true,
     name: 'Rowenta Steam Iron (Plancha vapor)',
     price: 140.0,
     referencePrice: 280.0,
