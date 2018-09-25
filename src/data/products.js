@@ -129,7 +129,7 @@ export const PRODUCTS = [
   },
   {
     id: 4,
-    sold: false,
+    sold: true,
     name: 'Batidora de mano KitchenAid',
     price: 25.0,
     referencePrice: 45.0,
