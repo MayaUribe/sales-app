@@ -321,7 +321,7 @@ export const PRODUCTS = [
   },
   {
     id: 9,
-    sold: true,
+    sold: false,
     name: 'Aspiradora Dyson',
     price: 135.0,
     referencePrice: 270.0,
